@@ -22,8 +22,8 @@
 | Security (Helmet, CORS, Rate Limiting) | ✅ Complete |
 | MongoDB + Mongoose Integration | ✅ Complete |
 | JWT Authentication + bcrypt | ✅ Complete |
-| Role Based Access Control | 🔄 In Progress |
-| Reviews System | 🔜 Coming Soon |
+| Role Based Access Control | ✅ Complete |
+| Reviews System | 🔄 In Progress |
 | Payment Integration | 🔜 Coming Soon |
 | Admin Dashboard | 🔜 Coming Soon |
 
