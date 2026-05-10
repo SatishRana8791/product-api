@@ -23,8 +23,8 @@
 | MongoDB + Mongoose Integration | ✅ Complete |
 | JWT Authentication + bcrypt | ✅ Complete |
 | Role Based Access Control | ✅ Complete |
-| Reviews System | 🔄 In Progress |
-| Payment Integration | 🔜 Coming Soon |
+| Reviews System | ✅ Complete |
+| Payment Integration | 🔄 In Progress |
 | Admin Dashboard | 🔜 Coming Soon |
 
 ---
