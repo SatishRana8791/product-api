@@ -20,6 +20,7 @@ const userrouter=require('./routes/user.route.js');
 const middleware=require('./middleware/logger.js');
 const errorhandlerMiddleware = require('./middleware/errorHandler.js');
 const reviewRouter=require('./routes/review.route.js');
+const paymentRouter=require('./routes/payment.route.js');
 
 app.use(express.json());
 app.use(middleware);
@@ -29,6 +30,7 @@ app.use('/api/v1/products', productRouter);
 app.use('/api/v1/category',categoryRouter);
 app.use('/api/v1/users',userrouter);
 app.use('/api/v1/reviews' , reviewRouter);
+app.use('/api/v1/payment' , paymentRouter);
 
 
 
