@@ -24,8 +24,8 @@
 | JWT Authentication + bcrypt | ✅ Complete |
 | Role Based Access Control | ✅ Complete |
 | Reviews System | ✅ Complete |
-| Payment Integration | 🔄 In Progress |
-| Admin Dashboard | 🔜 Coming Soon |
+| Payment Integration | ✅ Complete |
+| Admin Dashboard | 🔄 In Progress |
 
 ---
 
