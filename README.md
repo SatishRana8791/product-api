@@ -25,6 +25,7 @@
 | Role Based Access Control | ✅ Complete |
 | Reviews System | ✅ Complete |
 | Payment Integration | ✅ Complete |
+| Seeder File | ✅ Complete |
 | Admin Dashboard | 🔄 In Progress |
 
 ---
