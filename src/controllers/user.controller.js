@@ -4,7 +4,7 @@ const user=require('../models/user.model.js');
 const fetchAllUsers=async ( req , res )=>{
     //code here 
     try{
-        const data=await user.find();
+        const data=await user.find().select('-password');
         res.status(200).json({ 
             success:true,
             message:"Fetched All users Successfully",
@@ -23,7 +23,7 @@ const fetchAllUsers=async ( req , res )=>{
 const fetchUsersById=async ( req , res )=>{
     //code here 
     try{
-        const data=await user.findById(req.params.id);
+        const data=await user.findById(req.params.id).select('-password');
         if(!data){
             return res.status(404).json({
                 success:false,
