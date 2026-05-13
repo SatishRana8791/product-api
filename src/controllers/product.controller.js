@@ -4,10 +4,23 @@ const product=require('../models/product.model.js');
 const fetchAllProducts= async ( req , res)=>{
     //code here 
     try{
-        const data=await product.find();
+        //search params
+        const page=parseInt(req.query.page) || 1 ;
+        const limit=parseInt(req.query.limit) || 10 ;
+        
+        //skip the initial 
+        const skip=(page-1)*limit;
+
+        const keyword=req.query.search ? { name : { $regex: req.query.search, $options : 'i' }} : {} ;
+
+        const totalProducts=await product.countDocuments(keyword);
+
+        const data=await product.find(keyword).skip(skip).limit(limit);
+
         res.status(200).json({ 
             success:true,
             message:"Fetched All Products Successfully",
+            totalProducts,page,limit,
             data:data
         });
     }
