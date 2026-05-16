@@ -22,6 +22,7 @@ const errorhandlerMiddleware = require('./middleware/errorHandler.js');
 const reviewRouter=require('./routes/review.route.js');
 const paymentRouter=require('./routes/payment.route.js');
 const adminRouter= require('./routes/admin.route.js');
+const orderrouter=require('./routes/order.route.js');
 
 app.use(express.json());
 app.use(middleware);
@@ -33,6 +34,7 @@ app.use('/api/v1/users',userrouter);
 app.use('/api/v1/reviews' , reviewRouter);
 app.use('/api/v1/payment' , paymentRouter);
 app.use('/api/v1/admin', adminRouter);
+app.use('/api/v1/orders', orderrouter);
 
 
 
