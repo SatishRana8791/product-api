@@ -8,7 +8,7 @@ import AdminDashboard from './pages/admin/AdminDashboard.jsx'
 import Navbar from './components/Navbar.jsx'
 import ProtectedRoute from "./components/ProtectedRoute.jsx"
 import Products from "./pages/products.jsx"
-import Footer from "./pages/footer.jsx"
+import Footer from "./pages/Footer.jsx"
 
 
 function App(){
