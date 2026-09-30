@@ -5,7 +5,13 @@ const helmet = require('helmet');
 const ratelimit = require('express-rate-limit');
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: [
+        'http://localhost:5173',
+        'https://quickbasket-vert.vercel.app'
+    ],
+    credentials: true
+}));
 app.use(helmet());
 
 const limiter = ratelimit({
