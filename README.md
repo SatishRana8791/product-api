@@ -9,7 +9,7 @@
 
 ## 📌 Project Status
 
-🟢 **Backend Complete — Frontend In Progress**
+🟢 **Fully Complete & Live**
 
 | Phase | Status |
 |-------|--------|
@@ -34,6 +34,26 @@
 | Security | Helmet, CORS, Rate Limiting |
 
 ---
+
+## 🧠 Why This Stack?
+
+Every technology in this project was chosen with a specific reason:
+
+| Technology | Why I chose it |
+|------------|---------------|
+| **Node.js + Express** | Lightweight, fast, and industry-standard for building REST APIs. Express gives full control over routing and middleware |
+| **MongoDB + Mongoose** | Flexible schema design is perfect for e-commerce products that have varying attributes. Mongoose adds structure with models and validation |
+| **JWT Authentication** | Stateless authentication — no need to store sessions on the server. Scales easily and works well with REST APIs |
+| **bcrypt** | Industry standard for hashing passwords. Even if the database is compromised, passwords remain secure |
+| **RBAC (Role Based Access Control)** | Different users (admin vs customer) need different permissions. RBAC keeps routes protected without duplicating logic |
+| **Razorpay** | India's leading payment gateway — supports UPI, cards, net banking. Real-world integration that recruiters rarely see in portfolios |
+| **Multer** | Handles file uploads (product images) directly in Node.js without needing a third-party service |
+| **Helmet** | Sets secure HTTP headers with one line — protects against common web vulnerabilities like XSS, clickjacking |
+| **CORS** | Controls which frontend domains can access the API — essential for separating frontend and backend deployments |
+| **Rate Limiting** | Prevents brute force attacks and API abuse by limiting requests per IP |
+| **React + Vite** | Fast development experience with HMR. React's component model keeps the UI maintainable |
+| **Tailwind CSS** | Utility-first CSS — builds consistent UI faster without writing custom CSS files |
+| **React Router** | Declarative routing for multi-page feel in a single page app — handles protected routes cleanly |
 
 ## 📁 Project Structure
 
