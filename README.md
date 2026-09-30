@@ -2,6 +2,9 @@
 
 > A production-grade full-stack e-commerce application built from scratch. Features a complete REST API backend and a React frontend with payments, auth, admin dashboard, and more.
 
+🌐 **Live Demo:** [https://quickbasket-vert.vercel.app](https://quickbasket-vert.vercel.app)  
+⚙️ **API:** [https://quickbasket-lafj.onrender.com](https://quickbasket-lafj.onrender.com)
+
 ---
 
 ## 📌 Project Status
