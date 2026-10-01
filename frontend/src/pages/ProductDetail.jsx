@@ -110,8 +110,19 @@ const ProductDetail = () => {
     fetchReviews();
   },[id]);
 
+  const hasReviewed = user && reviews.some(r => r.userId?._id === user?.id);
+
   const handleReview=()=>{
     setReviewForm(!reviewform);
+  }
+
+  const handleDeleteReview = async (reviewId) => {
+    try {
+      await API.delete(`/reviews/${reviewId}`);
+      setReviews(reviews.filter(r => r._id !== reviewId));
+    } catch(e) {
+      console.log(e.message);
+    }
   }
 
   const handleSubmitReview = async () => {
@@ -230,12 +241,16 @@ const ProductDetail = () => {
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-bold">Customer Reviews</h2>
       
-          <button
-            onClick={handleReview}
-            className="bg-black text-white px-5 py-2 rounded-lg hover:bg-gray-800 transition cursor-pointer "
-          >
-            Write a Review
-          </button>
+          {!hasReviewed ? (
+            <button
+              onClick={handleReview}
+              className="bg-black text-white px-5 py-2 rounded-lg hover:bg-gray-800 transition cursor-pointer"
+            >
+              Write a Review
+            </button>
+          ) : (
+            <span className="text-green-600 font-medium text-sm">✅ You have already reviewed this product</span>
+          )}
         </div>
     
         {reviewform && (
@@ -286,9 +301,17 @@ const ProductDetail = () => {
                   </h3>
                 </div>
       
-                <span className="text-yellow-500 font-semibold">
-                  ⭐ {review.rating}/5
-                </span>
+                <div className="flex items-center gap-3">
+                  <span className="text-yellow-500 font-semibold">⭐ {review.rating}/5</span>
+                  {user && review.userId?._id === user?.id && (
+                    <button
+                      onClick={() => handleDeleteReview(review._id)}
+                      className="text-red-500 text-sm hover:text-red-700 transition cursor-pointer"
+                    >
+                      🗑️ Delete
+                    </button>
+                  )}
+                </div>
               </div>
       
               <p className="text-gray-600 leading-relaxed">
