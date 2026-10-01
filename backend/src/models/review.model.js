@@ -31,5 +31,9 @@ const reviewProduct=new mongoose.Schema({
 
 },{ timestamps:true });
 
+// Prevents same user from reviewing same product twice (DB level)
+reviewProduct.index({ userId: 1, productId: 1 }, { unique: true });
+
+
 const Review=mongoose.model('Review', reviewProduct);
 module.exports=Review;

@@ -9,6 +9,15 @@ const createReview=async ( req , res )=>{
         const rating=req.body.rating;
         const comment=req.body.reviewComment;
 
+        // Check if user already reviewed this product
+        const existing = await Review.findOne({ userId, productId });
+        if (existing) {
+            return res.status(400).json({
+                success: false,
+                message: "You have already reviewed this product"
+            });
+        }
+
         const newReview=await Review.create({
             userId,
             productId,
